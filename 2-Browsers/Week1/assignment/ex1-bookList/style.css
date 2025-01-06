@@ -1,1 +1,76 @@
-/* Write your style here */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0.75rem;
+}
+
+#bookList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  width: 100%;
+  max-width: 800px;
+  justify-content: center;
+}
+
+#bookList li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 280px;
+  height: auto;
+  overflow: hidden;
+}
+
+#bookList img {
+  width: 230px;
+  height: 345px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.book-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 5px;
+}
+
+.book-title {
+  font-weight: bold;
+}
+
+.book-author {
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+.read {
+  background-color: green;
+}
+
+.unread {
+  background-color: red;
+}
