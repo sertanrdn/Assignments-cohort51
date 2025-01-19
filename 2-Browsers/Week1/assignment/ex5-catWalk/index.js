@@ -30,6 +30,7 @@ let leftMove = 10;
 const screenWidth = window.innerWidth;
 let isDancing = false;
 let hasDanced = false;
+let movementInterval;
 
 function catWalk() {
   if (isDancing) {
@@ -60,9 +61,13 @@ function catWalk() {
   if (position >= screenWidth) {
     position = 0;
     hasDanced = false;
+    clearInterval(movementInterval); //Clearing the interval when the cat reaches to the end
+    setInterval(() => {
+      catWalk(); // Restarting the cat walk interval after clearing
+    }, 50);
   }
 }
 
 window.addEventListener('load', function () {
-  setInterval(catWalk, 50);
+  movementInterval = setInterval(catWalk, 50);
 });
