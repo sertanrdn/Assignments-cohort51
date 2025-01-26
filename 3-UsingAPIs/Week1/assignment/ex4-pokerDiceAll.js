@@ -27,9 +27,9 @@ exercise file.
 import { rollDie } from '../../helpers/pokerDiceRoller.js';
 
 export function rollDice() {
-  // TODO Refactor this function
   const dice = [1, 2, 3, 4, 5];
-  return rollDie(1);
+
+  return Promise.all(dice.map((die) => rollDie(die)));
 }
 
 function main() {
@@ -43,4 +43,5 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 
-// TODO Replace this comment by your explanation that was asked for in the assignment description.
+// When one of the promises rejected the other dice continue rolling.
+// Because each rollDie is an independent async function and rejecting one does not effect the others.
