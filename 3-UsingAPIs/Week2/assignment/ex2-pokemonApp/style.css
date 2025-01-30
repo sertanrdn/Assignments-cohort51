@@ -1,1 +1,28 @@
 /* add your styling here */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+#pokemon-select {
+  padding: 5px;
+  margin: 10px;
+  font-size: 20px;
+}
+
+#pokemon-image {
+  margin: 20px;
+  width: 200px;
+  height: auto;
+}
